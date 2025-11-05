@@ -1,18 +1,23 @@
-<h4 [innerText]="title"></h4>
-<h4>{{title}}</h4>
-<input type="text" [placeholder]="sample">
-<p>Bu yazı, {{ author }} tarafından {{ date }} tarihinde yayımlanmıştır</p>
-<input type="checkbox" [checked]="isChecked" name="" id="">
+<app-header-menu></app-header-menu>
+<div class="container">
+  <h4 [innerText]="title"></h4>
+  <h4>{{title}}</h4>
+  <input type="text" [placeholder]="sample">
+  <p>Bu yazı, {{ author }} tarafından {{ date }} tarihinde yayımlanmıştır</p>
+  <input type="checkbox" [checked]="isChecked" name="" id="">
 
-<input type="text" name="" id="" [(ngModel)]="textValue">
-<span>{{textValue}}</span>
+  <input type="text" name="" id="" [(ngModel)]="textValue" class="form-control">
+  <span>{{textValue}}</span>
+  <br>
+  <button class="btn btn-success" (click)="click_handled()">{{ buttonText }}</button>
 
-<ul>
-  <li [ngClass]="todo.isDone ? 'done':'unDone'" *ngFor="let todo of todoList">
-    <input type="checkbox" name="" [(ngModel)]="todo.isDone" id="">
-    {{todo.name}} - ({{todo.isDone ? "Yapıldı" : "Yapılacak"}})
-  </li>
-</ul>
+  <ul>
+    <li [ngClass]="todo.isDone ? 'done':'unDone'" *ngFor="let todo of todoList">
+      <input type="checkbox" name="" [(ngModel)]="todo.isDone" id="">
+      {{todo.name}} - ({{todo.isDone ? "Yapıldı" : "Yapılacak"}})
+    </li>
+  </ul>
 
-<p>Yapılacaklar listesinde toplam {{ todoList.length }} eleman bulunuyor. 
-   Bu listede, {{ getInCompletedTasksCount() }} eleman henüz yapılmamış.</p>
+  <p>Yapılacaklar listesinde toplam {{ todoList.length }} eleman bulunuyor.
+    Bu listede, {{ getInCompletedTasksCount()}} eleman henüz yapılmamış.</p>
+</div>
