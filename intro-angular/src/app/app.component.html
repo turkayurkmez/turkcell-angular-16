@@ -6,3 +6,13 @@
 
 <input type="text" name="" id="" [(ngModel)]="textValue">
 <span>{{textValue}}</span>
+
+<ul>
+  <li [ngClass]="todo.isDone ? 'done':'unDone'" *ngFor="let todo of todoList">
+    <input type="checkbox" name="" [(ngModel)]="todo.isDone" id="">
+    {{todo.name}} - ({{todo.isDone ? "Yapıldı" : "Yapılacak"}})
+  </li>
+</ul>
+
+<p>Yapılacaklar listesinde toplam {{ todoList.length }} eleman bulunuyor. 
+   Bu listede, {{ getInCompletedTasksCount() }} eleman henüz yapılmamış.</p>
