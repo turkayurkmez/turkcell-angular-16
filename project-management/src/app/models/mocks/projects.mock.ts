@@ -11,7 +11,7 @@ export const projects: Project[] = [
 
 ]),
 
- new Project(2, 'pRojeCt Y', 'Açıklama...',new Date(2025,10,6),0.15,1,
+ new Project(2, 'pRojeCt Y', 'Açıklama...',new Date(2025,10,6),0.15,2,
 [
     new Task(4, 'Task Y.A', 'A Açıklama',new Date(2025,10,6),2,false),
     new Task(5, 'Task Y.B', 'B Açıklama',new Date(2025,10,6),2,false),
@@ -20,7 +20,7 @@ export const projects: Project[] = [
 
 ]),
 
- new Project(3, 'prOjEct Z', 'Açıklama...',new Date(2025,10,6),0.15,1,
+ new Project(3, 'prOjEct Z', 'Açıklama...',new Date(2025,10,6),0.15,3,
 [
     new Task(7, 'Task Z.A', 'A Açıklama',new Date(2025,10,6),3,false),
     new Task(8, 'Task Z.B', 'B Açıklama',new Date(2025,10,6),3,false),

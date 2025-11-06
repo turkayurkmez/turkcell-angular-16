@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { KebabPipe } from './pipes/kebab.pipe';
 import { LengthPipe } from './pipes/length.pipe';
 import { SearchPipe } from './pipes/search.pipe';
+import { PostDataComponent } from './post-data/post-data.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { SearchPipe } from './pipes/search.pipe';
     ProjectTasksListComponent,
     KebabPipe,
     LengthPipe,
-    SearchPipe
+    SearchPipe,
+    PostDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-  ],
+    FormsModule,
+    HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
