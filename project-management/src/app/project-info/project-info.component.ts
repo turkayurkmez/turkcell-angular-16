@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from '../models/project.model';
 
 @Component({
   selector: 'app-project-info',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-info.component.css']
 })
 export class ProjectInfoComponent {
+
+  @Input('activeProject') project?: Project 
 
 }

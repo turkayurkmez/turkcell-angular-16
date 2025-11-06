@@ -1,10 +1,10 @@
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Proje Adı</h4>
-        <p class="card-text">Açıklama</p>
-        <p class="card-text">01.01.2026</p>
-        <p class="card-text">0.15</p>
-        <app-project-tasks-list></app-project-tasks-list>
+        <h4 class="card-title">{{ project?.name }}</h4>
+        <p class="card-text">{{ project?.description }}</p>
+        <p class="card-text">{{ project?.startDate }}</p>
+        <p class="card-text">{{project?.completedPercent}}</p>
+        <app-project-tasks-list [tasks]="project?.tasks"></app-project-tasks-list>
         
 
     </div>

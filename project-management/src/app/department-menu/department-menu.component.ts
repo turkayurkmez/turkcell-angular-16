@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Department } from '../models/department.model';
+import { departments } from '../models/mocks/departments.mock';
 
 @Component({
   selector: 'app-department-menu',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./department-menu.component.css']
 })
 export class DepartmentMenuComponent {
+  
+   departments: Department[] = departments;
+
+
 
 }

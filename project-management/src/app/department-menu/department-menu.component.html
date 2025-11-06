@@ -1,6 +1,6 @@
 <div class="list-group">
  
-  <a href="#" class="list-group-item list-group-item-action">Departman1</a>
-  <a href="#" class="list-group-item list-group-item-action">Departman2</a>
+  <a href="#" class="list-group-item list-group-item-action" *ngFor="let department of departments ">{{ department.name }}</a>
+
   
 </div>
