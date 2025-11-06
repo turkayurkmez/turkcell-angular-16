@@ -1,5 +1,9 @@
 <div class="row">
-    <div class="col-12" *ngFor="let item of projects">
+    <input type="text" placeholder="Proje Adı" class="text" [(ngModel)]="searchKey">
+</div>
+<div class="row">
+
+    <div class="col-12" *ngFor="let item of projects | search : searchKey">
         <app-project-info [activeProject]="item"></app-project-info>
     </div>
   

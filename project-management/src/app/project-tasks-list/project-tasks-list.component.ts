@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Task } from '../models/task.model';
 
 @Component({
   selector: 'app-project-tasks-list',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-tasks-list.component.css']
 })
 export class ProjectTasksListComponent {
+
+  @Input() tasks?: Task[]
 
 }

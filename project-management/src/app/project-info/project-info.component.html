@@ -1,9 +1,10 @@
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">{{ project?.name }}</h4>
-        <p class="card-text">{{ project?.description }}</p>
-        <p class="card-text">{{ project?.startDate }}</p>
-        <p class="card-text">{{project?.completedPercent}}</p>
+        <h4 class="card-title">{{ project?.name | titlecase}}</h4>
+        <p class="card-text">{{ project?.description | lowercase | kebab}}</p>
+        <p class="card-text">{{ project?.startDate | date : 'fullDate'}}</p>
+        <p class="card-text">{{project?.completedPercent | percent: '2.0-2'}}</p>
+        <h5>Toplam tasks sayısı: {{project?.tasks | length}}</h5>
         <app-project-tasks-list [tasks]="project?.tasks"></app-project-tasks-list>
         
 

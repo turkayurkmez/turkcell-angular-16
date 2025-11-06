@@ -8,6 +8,10 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectInfoComponent } from './project-info/project-info.component';
 import { ProjectTasksListComponent } from './project-tasks-list/project-tasks-list.component';
+import { FormsModule } from '@angular/forms';
+import { KebabPipe } from './pipes/kebab.pipe';
+import { LengthPipe } from './pipes/length.pipe';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { ProjectTasksListComponent } from './project-tasks-list/project-tasks-li
     HeaderMenuComponent,
     ProjectListComponent,
     ProjectInfoComponent,
-    ProjectTasksListComponent
+    ProjectTasksListComponent,
+    KebabPipe,
+    LengthPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
