@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { Project } from '../models/project.model';
@@ -20,6 +20,23 @@ export class ProjectsService {
                             console.log('Projeleri çekerken bir hata meydana geldi:', error.message);
                             return throwError(()=>new Error(error.statusText));
                           }));
-  } 
+  }
+  
+  //createProject methodu yaz:
+  createProject(project: Project): Observable<Project> {
+
+     let option ={
+          headers: new HttpHeaders({ 
+            'Content-Type': 'application/json' })
+         };
+
+    return this.httpClient.post<Project>(this.url, project,option)
+                          .pipe(
+                            catchError((error: HttpErrorResponse)=>{
+                              console.log('Proje oluşturulurken bir hata meydana geldi:', error.message);
+                              return throwError(()=>new Error(error.statusText));
+                            }));
+  }
+  
 }
 
