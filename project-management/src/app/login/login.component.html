@@ -1,0 +1,5 @@
+<div>
+    <input type="text" name="username" #userName class="form-control" placeholder="Kullanıcı adı" id="">
+    <input type="password" name="pass" class="form-control" #pass placeholder="Şifre" id="">
+    <button class="btn btn-danger" (click)="login(userName.value, pass.value)">Giriş</button>
+</div>

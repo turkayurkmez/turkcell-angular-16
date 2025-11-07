@@ -18,7 +18,7 @@ export class AddProjectComponent implements OnInit {
 
   addProjectForm!: FormGroup;
 
-  departments!: Department[];
+  departments$ = this.departmentService.getDepartments();
 
   ngOnInit(): void {
     //addProjectForm nesnesini initialize edeceğiz.
@@ -28,9 +28,9 @@ export class AddProjectComponent implements OnInit {
       departmentId: ['', Validators.required],
     });
 
-    this.departmentService
-      .getDepartments()
-      .subscribe((data) => (this.departments = data));
+    // this.departmentService
+    //   .getDepartments()
+    //   .subscribe((data) => (this.departments = data));
   }
 
   checkName(): boolean | undefined {

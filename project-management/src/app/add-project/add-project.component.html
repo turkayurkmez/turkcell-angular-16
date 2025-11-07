@@ -20,7 +20,7 @@
     <label for="departments">Departman</label>
     <select formControlName="departmentId"  class="form-control" id="departments">
         <option>Seçiniz...</option>
-        <option value="{{dep.id}}" *ngFor="let dep of departments">
+        <option value="{{dep.id}}" *ngFor="let dep of departments$ | async">
             {{dep.name}}
         </option>
     </select>

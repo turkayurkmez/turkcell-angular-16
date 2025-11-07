@@ -16,6 +16,7 @@ import { PostDataComponent } from './post-data/post-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddDepartmentComponent } from './add-department/add-department.component';
 import { AddProjectComponent } from './add-project/add-project.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddProjectComponent } from './add-project/add-project.component';
     SearchPipe,
     PostDataComponent,
     AddDepartmentComponent,
-    AddProjectComponent
+    AddProjectComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
