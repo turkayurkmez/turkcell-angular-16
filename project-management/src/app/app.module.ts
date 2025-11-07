@@ -8,12 +8,14 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectInfoComponent } from './project-info/project-info.component';
 import { ProjectTasksListComponent } from './project-tasks-list/project-tasks-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { KebabPipe } from './pipes/kebab.pipe';
 import { LengthPipe } from './pipes/length.pipe';
 import { SearchPipe } from './pipes/search.pipe';
 import { PostDataComponent } from './post-data/post-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddDepartmentComponent } from './add-department/add-department.component';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,16 @@ import { HttpClientModule } from '@angular/common/http';
     KebabPipe,
     LengthPipe,
     SearchPipe,
-    PostDataComponent
+    PostDataComponent,
+    AddDepartmentComponent,
+    AddProjectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

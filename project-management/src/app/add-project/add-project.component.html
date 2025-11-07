@@ -1,0 +1,27 @@
+<h3>Yeni Proje Ekle</h3>
+<form>
+ <div>
+    <label for="projectName">Proje  Adı</label>
+    <input type="text" formControlName="name" class="form-control" id="projectName" placeholder="Proje adı">
+    <span class="alert alert-danger" *ngIf="">Proje adı boş olamaz</span>
+ </div>
+ <div>
+    <label for="pDescription">Proje  Açıklaması</label>
+    <input type="text" formControlName="description" id="pDescription" class="form-control" placeholder="Proje açıklaması">
+    <span class="alert alert-danger" *ngIf="">Proje açıklaması boş olamaz</span>
+ </div>
+ <div>
+    <label for="startDate">Başlangıç tarihi</label>
+    <input type="datetime-local" class="form-control" name="startDate" id="startDate">
+ </div> 
+ <div>
+    <label for="departments">Departman</label>
+    <select formControlName="departmentId" class="form-control" id="departments">
+        <option>Seçiniz...</option>
+        <option></option>
+    </select>
+    <span class="alert alert-danger" *ngIf="">Lütfen departman seçin</span>
+
+ </div>     
+ <button type="submit" class="btn btn-dark">Ekle</button>
+</form>
