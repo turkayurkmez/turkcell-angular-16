@@ -1,0 +1,156 @@
+@projectManagement.API_HostAddress = http://localhost:5141
+
+### Departments Endpoints ###
+
+# Tüm departmanları getir
+GET {{projectManagement.API_HostAddress}}/api/departments
+Accept: application/json
+
+###
+
+# ID'ye göre departman getir
+GET {{projectManagement.API_HostAddress}}/api/departments/1
+Accept: application/json
+
+###
+
+# Yeni departman oluştur
+POST {{projectManagement.API_HostAddress}}/api/departments
+Content-Type: application/json
+
+{
+  "name": "Finance Department"
+}
+
+###
+
+# Departman güncelle
+PUT {{projectManagement.API_HostAddress}}/api/departments/1
+Content-Type: application/json
+
+{
+  "name": "IT Department - Updated"
+}
+
+###
+
+# Departman sil
+DELETE {{projectManagement.API_HostAddress}}/api/departments/3
+Accept: application/json
+
+###
+
+### Projects Endpoints ###
+
+# Tüm projeleri getir
+GET {{projectManagement.API_HostAddress}}/api/projects
+Accept: application/json
+
+###
+
+# ID'ye göre proje getir
+GET {{projectManagement.API_HostAddress}}/api/projects/1
+Accept: application/json
+
+###
+
+# Yeni proje oluştur
+POST {{projectManagement.API_HostAddress}}/api/projects
+Content-Type: application/json
+
+{
+  "name": "CRM System",
+  "description": "Customer Relationship Management System",
+  "startDate": "2024-03-01T00:00:00",
+  "completedPercent": 0,
+  "departmentId": 1,
+  "tasks": []
+}
+
+###
+
+# Proje güncelle
+PUT {{projectManagement.API_HostAddress}}/api/projects/1
+Content-Type: application/json
+
+{
+  "name": "E-Commerce Platform - Updated",
+  "description": "Building a modern e-commerce platform with microservices",
+  "startDate": "2024-01-15T00:00:00",
+  "completedPercent": 65,
+  "departmentId": 1,
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Database Design",
+      "description": "Design database schema",
+      "expectedDate": "2024-02-01T00:00:00",
+      "projectId": 1,
+      "isDone": true
+    },
+    {
+      "id": 2,
+      "name": "API Development",
+      "description": "Develop REST APIs",
+      "expectedDate": "2024-03-15T00:00:00",
+      "projectId": 1,
+      "isDone": false
+    }
+  ]
+}
+
+###
+
+# Proje sil
+DELETE {{projectManagement.API_HostAddress}}/api/projects/2
+Accept: application/json
+
+###
+
+### Tasks Endpoints ###
+
+# Tüm görevleri getir
+GET {{projectManagement.API_HostAddress}}/api/tasks
+Accept: application/json
+
+###
+
+# ID'ye göre görev getir
+GET {{projectManagement.API_HostAddress}}/api/tasks/1
+Accept: application/json
+
+###
+
+# Yeni görev oluştur
+POST {{projectManagement.API_HostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+  "name": "Frontend Development",
+  "description": "Develop Angular frontend",
+  "expectedDate": "2024-04-01T00:00:00",
+  "projectId": 1,
+  "isDone": false
+}
+
+###
+
+# Görev güncelle
+PUT {{projectManagement.API_HostAddress}}/api/tasks/1
+Content-Type: application/json
+
+{
+  "name": "Database Design - Completed",
+  "description": "Design database schema - PostgreSQL",
+  "expectedDate": "2024-02-01T00:00:00",
+  "projectId": 1,
+  "isDone": true
+}
+
+###
+
+# Görev sil
+DELETE {{projectManagement.API_HostAddress}}/api/tasks/3
+Accept: application/json
+
+###
